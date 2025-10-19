@@ -1,27 +1,18 @@
-# Getting Started with Create React App
+# 2026 Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run (see below for chromeOS instructions):
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ChromeOS configuration
 
 If on ChromeOS, you must do the following to get tailwind working locally:
 
-Run:
+In the project directory, run:
 ### `export HOST=0.0.0.0` then run `npm start`
 
-## OR
+### OR
 
 Create a .env file at the root of the project directory and add:
 ### `HOST=0.0.0.0` then run `npm start`
 
-Next, find out your Crostini IP on a seperate terminal by running:
+Next, find out your Crostini IP on a seperate terminal window by running:
 
 ### `hostname -I`
 (it's the second number and it looks like 100.115.xx.xxx on my device)
@@ -30,6 +21,20 @@ Then visit http://<Crostini IP>:3000 instead of localhost
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## More Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. For ChromeOS, please see ChromeOS configuration section.
+
+
+### `npm run deploy`
+To build public directory and deploy via GitHub pages
+
 
 ### `npm test`
 
@@ -56,8 +61,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
