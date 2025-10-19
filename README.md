@@ -11,16 +11,22 @@ In the project directory, you can run (see below for chromeOS instructions):
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-If on ChromeOS, you can run:
+If on ChromeOS, you must do the following to get tailwind working locally:
 
-### `npm run startOnChrome` or `npm start -- --host 0.0.0.0`
+Run:
+### `export HOST=0.0.0.0` then run `npm start`
 
-Find out your Crostini IP on a seperate terminal by running:
+## OR
+
+Create a .env file at the root of the project directory and add:
+### `HOST=0.0.0.0` then run `npm start`
+
+Next, find out your Crostini IP on a seperate terminal by running:
 
 ### `hostname -I`
 (it's the second number and it looks like 100.115.xx.xxx on my device)
 
-Then visit http://<Crostini IP>:3000
+Then visit http://<Crostini IP>:3000 instead of localhost
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
