@@ -1,12 +1,16 @@
 import React from "react"
 
 interface Project {
-    title: string
+    title: string,
+    description: string,
+    link: string
 }
 
 const projects: Project[] = [
     {
-        title: "Groupie Tracker"
+        title: "Groupie Tracker",
+        description: "Consists of receiving a given API and manipulating the data contained in it in order to create a website displaying the information",
+        link: "https://github.com/recentlyhatched/groupie-tracker"
     }
 ]
 
@@ -23,6 +27,14 @@ const Projects: React.FC = () => {
                             <h3 className="text-xl font-bold text-indigo-600 mb-2">
                                 {p.title}
                             </h3>
+                            <p className="text-gray-600 mb-4">{p.description}</p>
+                            <a href={p.link}
+                                className="text-indigo-500 hover:underline font-medium"
+                                target="_blank"
+                                rel="noopener noreferrer" // prevents tabnabbing attacks and prevents HTTP referer headers, respectively
+                                >
+                                Repo
+                            </a>
                         </div>
                     ))}
 
