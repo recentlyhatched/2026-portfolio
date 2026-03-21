@@ -3,14 +3,28 @@ import React from "react"
 interface Project {
     title: string,
     description: string,
-    link: string
+    live: string,
+    repo: string
 }
 
 const projects: Project[] = [
     {
         title: "Groupie Tracker",
-        description: "Consists of receiving a given API and manipulating the data contained in it in order to create a website displaying the information",
-        link: "https://github.com/recentlyhatched/groupie-tracker"
+        description: "Consists of receiving a given API and manipulating the data contained in it in order to create a website displaying the information. Hosted on GCP App Engine.",
+        live: "https://steadfast-canto-447414-a2.nw.r.appspot.com/",
+        repo: "https://github.com/recentlyhatched/groupie-tracker/"
+    },
+    {
+        title: "Forum",
+        description: "Consists of designing a relational database schema to store data, including implementing queries for retrieving structured discussions. Hosted on AWS Elastic Beanstalk.",
+        live: "http://forumapp-env.eba-j6cnhiaw.eu-west-2.elasticbeanstalk.com/",
+        repo: "https://github.com/recentlyhatched/forum/"
+    },
+    {
+        title: "To Do List",
+        description: "Consists of building a Flask-based web application with an SQLite database, including CRUD operations, with server-side routing and query handling. Hosted on Render.",
+        live: "https://to-do-list-erey.onrender.com/",
+        repo: "https://github.com/recentlyhatched/to-do-list/"
     }
 ]
 
@@ -28,13 +42,22 @@ const Projects: React.FC = () => {
                                 {p.title}
                             </h3>
                             <p className="text-gray-600 mb-4">{p.description}</p>
-                            <a href={p.link}
-                                className="text-indigo-500 hover:underline font-medium"
-                                target="_blank"
-                                rel="noopener noreferrer" // prevents tabnabbing attacks and prevents HTTP referer headers, respectively
-                                >
-                                Repo
-                            </a>
+                            <div className="flex gap-4">
+                                <a href={p.live}
+                                    className="text-indigo-500 hover:underline font-medium"
+                                    target="_blank"
+                                    rel="noopener noreferrer" // prevents tabnabbing attacks and prevents HTTP referer headers, respectively
+                                    >
+                                    Live
+                                </a>
+                                                            <a href={p.repo}
+                                    className="text-indigo-500 hover:underline font-medium"
+                                    target="_blank"
+                                    rel="noopener noreferrer" // prevents tabnabbing attacks and prevents HTTP referer headers, respectively
+                                    >
+                                    Repo
+                                </a>
+                            </div>
                         </div>
                     ))}
 
